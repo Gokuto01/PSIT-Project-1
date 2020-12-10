@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
-from route import test
+from All_Anime_List import test
 
 data = [###รอข้อมูลจาก database
 
