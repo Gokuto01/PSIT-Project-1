@@ -9,9 +9,12 @@ def  multi_key_dict_get(d, k):
             return v
     return None
 
-anime_dict = {}
-for i in range(50):
-    str_name = dbf.get('NAME')[i]
-    tuple_name = tuple(str_name.split(', '))
-    link_name = dbf.get('LINK')[i]
-    anime_dict.update({tuple_name: link_name})
+def anime_dict():
+    anime_dict = {}
+    for i in range(50):
+        str_name = dbf.get('NAME')[i]
+        tuple_name = tuple(str_name.split(', '))
+        link_name = dbf.get('LINK')[i]
+        anime_dict.update({tuple_name: link_name})
+    return anime_dict
+
