@@ -1,9 +1,9 @@
-from flask import Flask, render_template, jsonify, request
-from flask_cors import CORS
-from route import get_all, get_name, select_type
-import pandas as pd
+from Flask import Flask, render_template, jsonify, request
+from Flask_cors import CORS
+from route import get_name, link_anime, select_type
+from data_base import anime_list
 
-#เรียกใช้ข้อมูลจาก gsheet
+anime_dict = anime_list()
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
