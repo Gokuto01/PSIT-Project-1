@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <?php
+    $url = 'http://localhost:5000/';
+    $data = file_get_contents($url);
+    $animes = json_decode($data);
+    ?>
     <div class="main text-center">
         <div class="h-100" style="display:grid; align-items: center;">
             <div class="container">
@@ -17,6 +22,16 @@
                 <div class="input-group flex-nowrap">
                     <input type="text" class="form-control" placeholder="Anime Name" aria-label="Anime Name" aria-describedby="addon-wrapping">
                     <button type="button" class="btn btn-dark">Search</button>
+                </div>
+                <div class="row">
+                    <?php foreach ($animes as $anime) : ?>
+                        <div class="card col-6 m-5" style="width: 18rem; cursor: pointer;)" onclick="window.open('<?php echo $anime->link ?>')">
+                            <img src="Picture/Card/<?php echo $anime->id?>.png" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text"><?php echo implode(" ", $anime->name) . '<br>'; ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

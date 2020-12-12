@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
 
-.main{
-    height: 1000px;
+body{
     /* https://www.wallpaperflare.com/female-anime-character-anime-girls-white-hair-long-hair-sky-wallpaper-lpy/download/3840x2160 */
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Picture/bg_main.jpg');
     background-repeat: no-repeat; 
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
     
 }
 

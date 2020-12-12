@@ -13,11 +13,10 @@ def return_all():
 @app.route('/get_name/<name>')
 def return_name(name):
     return jsonify(get_name(name))
-    
+
 @app.route('/get_genres/<genres>')
 def return_genres(genres):
     return jsonify(get_genres(genres))
-    
 
 if __name__ == '__main__':
     app.run(debug=True)
