@@ -15,8 +15,8 @@ def return_all():
 def return_anime(name):
     return jsonify(get_anime(name))
     
-@app.route('/get_gen/<type>')
-def return_gen(gen):
+@app.route('/get_genres/<genres>')
+def return_genres(genres):
     return jsonify(get_genres(gen))
     
 
