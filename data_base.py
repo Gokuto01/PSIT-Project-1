@@ -18,3 +18,14 @@ def anime_dict():
         link_name = df.get('LINK')[i]
         name_link_anime.update({tuple_name: link_name})
     return name_link_anime
+
+def anime_data():
+    data=[]
+    num_anime = list(df.get('NO.'))[-1]
+    for i in range(num_anime):
+        anime = {}
+        anime['name'] = tuple(df.get("NAME")[i].split(', '))
+        anime['link'] = df.get("LINK")[i]
+        anime['genres'] = tuple(df.get("GENRES")[i].split(', '))
+        data.append(anime)
+    return data
