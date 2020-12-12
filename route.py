@@ -1,4 +1,4 @@
-  from data_base import anime_data
+from data_base import anime_data
 
 def get_all():
     return anime_data()
