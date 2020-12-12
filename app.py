@@ -1,5 +1,4 @@
-from Flask import Flask, render_template, jsonify, request
-from Flask_cors import CORS
+from Flask import Flask, jsonify
 from route import get_all, get_genres, get_name
 from data_base import anime_list
 
