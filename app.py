@@ -3,7 +3,7 @@ from Flask_cors import CORS
 from route import get_name, link_anime, select_type
 from data_base import anime_list
 
-anime_dict = anime_list()
+name_link = anime_dict()
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
