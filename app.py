@@ -1,6 +1,7 @@
 from Flask import Flask, jsonify
+from Flask_cors import CORS
 from route import get_all, get_genres, get_name
-from data_base import anime_list
+from data_base import anime_data
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
