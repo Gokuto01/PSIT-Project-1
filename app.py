@@ -1,6 +1,6 @@
 from Flask import Flask, render_template, jsonify, request
 from Flask_cors import CORS
-from route import get_name, link_anime, select_type
+from route import get_all, get_genres, get_name
 from data_base import anime_list
 
 name_link = anime_dict()
