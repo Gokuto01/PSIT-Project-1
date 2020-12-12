@@ -13,6 +13,6 @@ def get_name(name):
 def get_genres(gen):
     data = []
     for item in anime_data():
-        if gen in item["geresn"]:
+        if gen in item["genres"]:
             data.append(item)
     return data
