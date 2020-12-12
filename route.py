@@ -1,4 +1,4 @@
-from data_base import anime_data
+  from data_base import anime_data
 
 def get_all():
     return anime_data()
@@ -11,7 +11,7 @@ def get_name(name):
         return None
 
 def get_genres(gen):
-    data = []
+    data=[]
     for item in anime_data():
         if gen in item["genres"]:
             data.append(item)
