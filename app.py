@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from route import get_all, get_name, get_genres
+from route import get_all, get_name
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
@@ -14,9 +14,9 @@ def return_all():
 def return_name(name):
     return jsonify(get_name(name))
 
-@app.route('/get_genres/<genres>')
-def return_genres(genres):
-    return jsonify(get_genres(genres))
+# @app.route('/get_genres/<genres>')
+# def return_genres(genres):
+#     return jsonify(get_genres(genres))
 
 if __name__ == '__main__':
     app.run(debug=True)
