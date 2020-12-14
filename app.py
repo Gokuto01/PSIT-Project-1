@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from route import get_all, get_name
 
+# https://stackoverflow.com/questions/19962699/flask-restful-cross-domain-issue-with-angular-put-options-methods
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 @app.route('/')
